@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="fruits">
+        <li class="fr apple">사과</li>
+        <li class="fr banana">바나나</li>
+        <li class="fr grape">포도</li>
+        <li class="fr pineapple">파인애플</li>
+    </ul>
+
+    <script>
+        const $grape = document.querySelector('#fruits .fr.grape');
+        $grape.textContent='졸라 신 포도';
+
+        const $elems = document.querySelectorAll(".fr");
+        console.log($elems);
+        $elems[0].style.color ='red';
+
+        // for(let i=0; i<$elems.length;i++){
+        //     $elems[i].style.fontWeight='700';
+        // }
+
+        for(let $li of $elems){
+            $li.style.fontWeight='700';
+        }
+    </script>
+
+</body>
+</html>

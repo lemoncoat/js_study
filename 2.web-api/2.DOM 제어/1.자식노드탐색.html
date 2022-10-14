@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="fruits">
+        <li class="apple">사과</li>
+        <li class="banana">바나나</li>
+        <li class="grape">포도</li>
+    </ul>
+    
+    <div class="ttt">
+        <p></p>
+    </div>
+
+    <script>
+        const $fruits = document.querySelector('#fruits');
+        const $liList = $fruits.children;
+        console.log($liList);
+
+        //첫번재 자식 노드 취득
+        // const $first = $fruits.children[0];
+        const $first = $fruits.firstElementChild;
+        //마지막 자식 노드 취득
+        // const $last = $fruits.children[$fruits.children.length-1];
+        const $last = $fruits.lastElementChild;
+        console.log($first);
+        console.log($last);
+
+
+        const $ttt=document.querySelector(".ttt");
+        // console.log($ttt.hasChildNodes()); //공백도 자식으로 봄
+        console.log(!!$ttt.children.length); //자식 유무 판단
+    </script>
+</body>
+
+</html>
